@@ -17,7 +17,7 @@ updater = Updater("5836658304:AAEiWmnORjOiY76ee5lYKe4CgeZG6pX4eL4",
 				use_context=True)
 
 def start(update: Update, context: CallbackContext):
-   update.message.reply_text("Hello dear ol jeetards")
+   update.message.reply_text("Hello dear old jeetards")
   
 def Timer(update: Update, context: CallbackContext):
 	today=dt.today()
