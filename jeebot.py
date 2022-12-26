@@ -28,14 +28,8 @@ def Timer(update: Update, context: CallbackContext):
 	image = get(randomPImageUrl).content
 	context.bot.sendMediaGroup(chat_id=update.effective_chat.id, media=[InputMediaPhoto(image, caption="Days To JEE 2024 : {}".format(leday.days))])
 
-def studytime(update: Update, context: CallbackContext):
-	now = dt.now()
-	current_time = now.strftime("%H:%M:%S")
-	update.message.reply_text("Study Timer Started : {}".format(current_time))
-	
-
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('timer', Timer))
-updater.dispatcher.add_handler(CommandHandler('study', studytime))
+
 
 updater.start_polling()
